@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WLSendFillOutInfoCell" customModule="MyFengXianSheng" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发件人:    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSQ-LR-aSf">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Qnz-Fe-cKX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2X4-7l-cVP">
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="cSY-8b-YIu"/>
+                        </connections>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-zv-SDp">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="2UK-JT-Fdi"/>
+                            <constraint firstAttribute="height" constant="20" id="XO3-kR-UJI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="OSQ-LR-aSf" secondAttribute="bottom" constant="1" id="EWn-4c-cXc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZbU-zv-SDp" secondAttribute="trailing" constant="2" id="NcL-9e-vlF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZbU-zv-SDp" secondAttribute="bottom" constant="6" id="XoE-s5-Pde"/>
+                    <constraint firstItem="2X4-7l-cVP" firstAttribute="top" secondItem="OSQ-LR-aSf" secondAttribute="top" id="bSd-g8-shn"/>
+                    <constraint firstItem="2X4-7l-cVP" firstAttribute="leading" secondItem="OSQ-LR-aSf" secondAttribute="trailing" constant="17" id="f8c-oF-Pwo"/>
+                    <constraint firstItem="OSQ-LR-aSf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="fGb-Kc-lC3"/>
+                    <constraint firstItem="OSQ-LR-aSf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="fiU-IB-yUI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2X4-7l-cVP" secondAttribute="trailing" constant="22" id="fw1-W9-ru8"/>
+                    <constraint firstItem="ZbU-zv-SDp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="tkS-d1-sBF"/>
+                    <constraint firstItem="2X4-7l-cVP" firstAttribute="bottom" secondItem="OSQ-LR-aSf" secondAttribute="bottom" id="yH8-Qe-mCB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoTextField" destination="2X4-7l-cVP" id="r05-SC-UDg"/>
+                <outlet property="rightImageV" destination="ZbU-zv-SDp" id="l7l-Vs-EoJ"/>
+                <outlet property="titleLab" destination="OSQ-LR-aSf" id="vtR-RI-gNU"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="go" width="24" height="24"/>
+    </resources>
+</document>
